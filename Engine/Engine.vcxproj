@@ -91,6 +91,8 @@
     <ClCompile Include="Source.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Common\base_types.hpp" />
+    <ClInclude Include="engine.hpp" />
     <ClInclude Include="Memory\IAllocator.hpp" />
     <ClInclude Include="Memory\StackAllocator.hpp" />
   </ItemGroup>

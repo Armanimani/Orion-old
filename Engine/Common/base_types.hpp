@@ -1,6 +1,7 @@
 #pragma once
 
 #include <cstdint>
+#include <cstdlib>
 
 namespace orion
 {
@@ -18,4 +19,6 @@ namespace orion
 	using Double = double;
 
 	using Bool = bool;
+
+	using Size_t = std::size_t;
 }
