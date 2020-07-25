@@ -92,6 +92,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Memory\IAllocator.hpp" />
+    <ClInclude Include="Memory\StackAllocator.hpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

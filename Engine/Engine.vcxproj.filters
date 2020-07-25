@@ -23,5 +23,8 @@
     <ClInclude Include="Memory\IAllocator.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="Memory\StackAllocator.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
