@@ -6,4 +6,8 @@
 	#define ORION_API __declspec(dllimport)
 #endif
 
+#ifdef _DEBUG
+	#define ORION_DEBUG
+#endif
+
 #include "Engine/Common/base_types.hpp"
