@@ -5,7 +5,7 @@
 namespace orion
 {
 	template<typename ElementType, Size_t Size>
-	class StaticArray
+	class ORION_API StaticArray
 	{
 	public:
 		using element_type = ElementType;
