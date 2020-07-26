@@ -95,7 +95,6 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Common\base_types.hpp" />
-    <ClInclude Include="Containers\StaticArray.hpp" />
     <ClInclude Include="engine.hpp" />
     <ClInclude Include="Memory\Allocators\allocator_utilities.hpp" />
     <ClInclude Include="Memory\Allocators\IAllocator.hpp" />

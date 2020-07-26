@@ -41,8 +41,5 @@
     <ClInclude Include="Memory\Allocators\allocator_utilities.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Containers\StaticArray.hpp">
-      <Filter>Header Files</Filter>
-    </ClInclude>
   </ItemGroup>
 </Project>
