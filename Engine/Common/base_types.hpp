@@ -1,7 +1,7 @@
 #pragma once
 
 #include <cstdint>
-#include <cstdlib>
+#include <cstddef>
 
 namespace orion
 {
@@ -21,4 +21,5 @@ namespace orion
 	using Bool = bool;
 
 	using Size_t = std::size_t;
+	using Byte = std::byte;
 }
