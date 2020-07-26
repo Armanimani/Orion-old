@@ -41,8 +41,8 @@
     <IntDir>$(SolutionDir)Build\$(Platform)-$(Configuration)\$(ProjectName)\</IntDir>
   </PropertyGroup>
   <ItemGroup>
+    <ClCompile Include="Memory\Allocators\test_StackAllocator.cpp" />
     <ClCompile Include="Memory\test_memory_literals.cpp" />
-    <ClCompile Include="test.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Engine\Engine.vcxproj">
