@@ -9,6 +9,6 @@ int main()
 
 	orion::ConsoleLogger::logCritical("Sandbox", "Critical message example");
 	orion::ConsoleLogger::logWarning("Sandbox", "Warning message example");
-	orion::ConsoleLogger::logDebug("Sandbox", "Debug message example");
 	orion::ConsoleLogger::logInformation("Sandbox", "Information message example");
+	orion::ConsoleLogger::logDebug("Sandbox", "Debug message example");
 }

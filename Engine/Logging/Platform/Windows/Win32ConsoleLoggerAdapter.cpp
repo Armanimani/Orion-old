@@ -8,10 +8,10 @@ namespace orion
 {
 	std::unordered_map<LoggingLevel, UInt8> Win32ConsoleLoggerAdapter::s_console_color_map =
 	{
-		{LoggingLevel::critical, 12},
-		{LoggingLevel::warning, 14},
-		{LoggingLevel::information, 10},
-		{LoggingLevel::debug, 7}
+		{LoggingLevel::critical, FOREGROUND_RED},
+		{LoggingLevel::warning, FOREGROUND_GREEN | FOREGROUND_RED},
+		{LoggingLevel::information, FOREGROUND_GREEN | FOREGROUND_BLUE},
+		{LoggingLevel::debug, FOREGROUND_GREEN}
 	};
 
 	std::unordered_map<LoggingLevel, std::string> Win32ConsoleLoggerAdapter::s_severity_token_map =
@@ -46,19 +46,19 @@ namespace orion
 	void Win32ConsoleLoggerAdapter::logMessage(const std::string_view channel, const std::string_view log_message,
 		const LoggingLevel level) const noexcept
 	{
-		const auto handle = GetStdHandle(STD_OUTPUT_HANDLE);
+		auto* const handle = GetStdHandle(STD_OUTPUT_HANDLE);
 		// Cache the current console attributes to revert afterward
 		CONSOLE_SCREEN_BUFFER_INFO console_screen_buffer_info;
 		GetConsoleScreenBufferInfo(handle, &console_screen_buffer_info);
 		const auto previous_console_attribute = console_screen_buffer_info.wAttributes;
 
 		const auto color = s_console_color_map[level];
-		SetConsoleTextAttribute(handle, previous_console_attribute);
+		SetConsoleTextAttribute(handle, color);
 		
 		std::cout << getFormattedMessage(channel, log_message, level) << std::endl;
 
 		// Revert back console attributes
-		SetConsoleTextAttribute(handle, static_cast<WORD>(color));
+		SetConsoleTextAttribute(handle, static_cast<WORD>(previous_console_attribute));
 	}
 
 	std::string Win32ConsoleLoggerAdapter::getFormattedTime() const noexcept
