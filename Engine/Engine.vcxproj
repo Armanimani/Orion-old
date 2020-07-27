@@ -90,16 +90,31 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Logging\ConsoleLogger.cpp" />
+    <ClCompile Include="main.cpp" />
+    <ClCompile Include="Logging\Platform\Windows\Win32ConsoleLoggerAdapter.cpp" />
     <ClCompile Include="Memory\Allocators\StackAllocator.cpp" />
-    <ClCompile Include="Source.cpp" />
+    <ClCompile Include="Time\CalenderClock.cpp" />
+    <ClCompile Include="Time\Clock.cpp" />
+    <ClCompile Include="Time\StopWatch.cpp" />
+    <ClCompile Include="Time\Timer.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Common\base_types.hpp" />
+    <ClInclude Include="DesignPatterns\ServiceLocator.hpp" />
     <ClInclude Include="engine.hpp" />
+    <ClInclude Include="Logging\ConsoleLogger.hpp" />
+    <ClInclude Include="Logging\IConsoleLoggerAdapter.hpp" />
+    <ClInclude Include="Logging\LoggingLevel.hpp" />
+    <ClInclude Include="Logging\Platform\Windows\Win32ConsoleLoggerAdapter.hpp" />
     <ClInclude Include="Memory\Allocators\allocator_utilities.hpp" />
     <ClInclude Include="Memory\Allocators\IAllocator.hpp" />
     <ClInclude Include="Memory\Allocators\StackAllocator.hpp" />
     <ClInclude Include="Memory\memory_literals.hpp" />
+    <ClInclude Include="Time\CalenderClock.hpp" />
+    <ClInclude Include="Time\Clock.hpp" />
+    <ClInclude Include="Time\StopWatch.hpp" />
+    <ClInclude Include="Time\Timer.hpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
