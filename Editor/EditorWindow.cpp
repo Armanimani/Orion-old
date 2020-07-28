@@ -1,7 +1,11 @@
 #include "Editor/EditorWindow.hpp"
 
-EditorWindow::EditorWindow(QWidget *parent)
-    : QMainWindow(parent)
+namespace orion::editor
 {
-    ui.setupUi(this);
+	EditorWindow::EditorWindow(QWidget* parent)
+		: QMainWindow(parent)
+	{
+		ui.setupUi(this);
+	}
+
 }

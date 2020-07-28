@@ -3,8 +3,11 @@
 
 int main(int argc, char *argv[])
 {
-    QApplication a(argc, argv);
-    EditorWindow w;
-    w.show();
-    return a.exec();
+	QApplication application(argc, argv);
+
+	orion::editor::EditorWindow window;
+	window.show();
+	
+	const auto return_code = application.exec();
+	return return_code;
 }
