@@ -5,10 +5,43 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Editor.MainWindow"
         mc:Ignorable="d"
-        Title="Orion Editor" Height="450" Width="800" WindowState="Maximized">
+        Title="Orion Editor" Height="1080" Width="1920" WindowState="Maximized">
     <Window.Style>
-	    <Style TargetType="Window" BasedOn="{StaticResource {x:Type Window}}"/>
-    </Window.Style> 
-	<Grid>
-	</Grid>
+        <Style TargetType="Window" BasedOn="{StaticResource {x:Type Window}}" />
+    </Window.Style>
+
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="250" />
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="250" />
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*" />
+            <RowDefinition Height="250" />
+        </Grid.RowDefinitions>
+
+        <TabControl Grid.Column="1" Grid.Row="1" HorizontalAlignment="Stretch" Name="tabControl1" VerticalAlignment="Stretch"
+		            VerticalContentAlignment="Stretch" HorizontalContentAlignment="Stretch">
+            <TabItem Header="Output">
+                <Grid Background="#1e1e1e" >
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="2*"/>
+                        <ColumnDefinition Width="91*"/>
+                    </Grid.ColumnDefinitions>
+                    <RichTextBox HorizontalAlignment="Stretch"  VerticalAlignment="Stretch" Background="#1e1e1e" Foreground="#DDDDDD" Grid.ColumnSpan="2">
+                        <FlowDocument>
+                            <Paragraph>
+                                <Run Text="RichTextBox"/>
+                            </Paragraph>
+                        </FlowDocument>
+                    </RichTextBox>
+                </Grid>
+            </TabItem>
+            
+        </TabControl>
+	    <GridSplitter Height="100" Width="5"/>
+        <StatusBar></StatusBar>
+
+    </Grid>
 </Window>
