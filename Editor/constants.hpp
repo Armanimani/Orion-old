@@ -2,6 +2,7 @@
 
 namespace orion::editor
 {
+	constexpr auto k_editor_channel = "Editor";
 	// icons
 	constexpr auto k_icon_window_restore_32 = ":/Editor/Resources/icons/window_restore_32.png";
 	constexpr auto k_icon_window_minimize_32 = ":/Editor/Resources/icons/window_minimize_32.png";

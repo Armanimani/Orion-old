@@ -20,7 +20,6 @@ namespace orion::editor
 
 		// ReSharper disable once IdentifierTypo
 		std::streamsize xsputn(const char* p, std::streamsize n) override;
-
 	private:
 		std::ostream& stream;
 		std::streambuf* old_buffer;
