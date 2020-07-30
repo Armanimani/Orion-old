@@ -113,10 +113,14 @@
     <QtRcc Include="EditorWindow.qrc" />
     <QtUic Include="EditorWindow.ui" />
     <QtMoc Include="EditorWindow.hpp" />
+    <ClCompile Include="Components\Output\StreamOutputPipe.cpp" />
+    <ClCompile Include="Components\Output\TextEditOutput.cpp" />
     <ClCompile Include="EditorWindow.cpp" />
     <ClCompile Include="main.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <QtMoc Include="Components\Output\TextEditOutput.hpp" />
+    <ClInclude Include="Components\Output\StreamOutputPipe.hpp" />
     <ClInclude Include="constants.hpp" />
     <ClInclude Include="StyleSheet\StyleSheetManager.hpp" />
   </ItemGroup>
