@@ -31,9 +31,9 @@ namespace orion::editor
 		return v;
 	}
 
-	std::streamsize StreamOutputPipe::xsputn(const char* p, std::streamsize n)
+	std::streamsize StreamOutputPipe::xsputn(const char* data, std::streamsize size)
 	{
-		string.append(p, p + n);
+		string.append(data, data + size);
 
 		auto pos = 0;
 		while (pos != std::string::npos)
@@ -47,6 +47,6 @@ namespace orion::editor
 			}
 		}
 
-		return n;
+		return size;
 	}
 }

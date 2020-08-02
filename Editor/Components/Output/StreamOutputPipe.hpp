@@ -19,7 +19,7 @@ namespace orion::editor
 		int_type overflow(int_type v) override;
 
 		// ReSharper disable once IdentifierTypo
-		std::streamsize xsputn(const char* p, std::streamsize n) override;
+		std::streamsize xsputn(const char* data, std::streamsize size) override;
 	private:
 		std::ostream& stream;
 		std::streambuf* old_buffer;
