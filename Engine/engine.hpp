@@ -28,3 +28,8 @@
 #pragma warning(disable:4530)
 
 #include "Engine/Common/base_types.hpp"
+
+namespace orion
+{
+	constexpr auto k_engine_channel = "Engine";
+}

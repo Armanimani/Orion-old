@@ -90,6 +90,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Application\Application.cpp" />
     <ClCompile Include="Logging\ConsoleLogger.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="Logging\Platform\Windows\Win32ConsoleLoggerAdapter.cpp" />
@@ -100,6 +101,8 @@
     <ClCompile Include="Time\Timer.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Application\Application.hpp" />
+    <ClInclude Include="Application\EngineContext.hpp" />
     <ClInclude Include="Common\base_types.hpp" />
     <ClInclude Include="DesignPatterns\ServiceLocator.hpp" />
     <ClInclude Include="engine.hpp" />
