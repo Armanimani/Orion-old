@@ -8,7 +8,7 @@
 namespace orion
 {
 	template<typename Function>
-	void timedExecution(const std::string& function_name, Function&& function)
+	void executeAndLogTime(const std::string& function_name, Function&& function)
 	{
 		ConsoleLogger::logInformation(k_engine_channel, function_name + "...");
 		auto stop_watch = StopWatch();
@@ -37,7 +37,7 @@ namespace orion
 	
 	void Application::configure() noexcept
 	{
-		timedExecution("Configuring", [=]()
+		executeAndLogTime("Configuring", [=]()
 			{
 				//TODO: configure all pipelines
 			}
@@ -46,7 +46,7 @@ namespace orion
 	
 	void Application::initialize() noexcept
 	{
-		timedExecution("Initializing", [=]()
+		executeAndLogTime("Initializing", [=]()
 			{
 				//TODO: initialize all pipelines
 			}
@@ -73,7 +73,7 @@ namespace orion
 	
 	void Application::finalize() noexcept
 	{
-		timedExecution("Initializing", [=]()
+		executeAndLogTime("finalizing", [=]()
 			{
 				//TODO: finalize all pipelines
 			}
