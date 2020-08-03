@@ -1,5 +1,7 @@
 #pragma once
 
+#include "Engine/engine.hpp"
+
 #include <memory>
 
 namespace orion
