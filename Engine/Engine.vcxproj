@@ -104,8 +104,11 @@
     <ClInclude Include="Application\Application.hpp" />
     <ClInclude Include="Application\EngineContext.hpp" />
     <ClInclude Include="Common\base_types.hpp" />
+    <ClInclude Include="Containers\SparseSet.hpp" />
     <ClInclude Include="DesignPatterns\ServiceLocator.hpp" />
     <ClInclude Include="engine.hpp" />
+    <ClInclude Include="Entity\Entity.hpp" />
+    <ClInclude Include="Entity\EntityRegistry.hpp" />
     <ClInclude Include="Logging\ConsoleLogger.hpp" />
     <ClInclude Include="Logging\IConsoleLoggerAdapter.hpp" />
     <ClInclude Include="Logging\LoggingLevel.hpp" />
@@ -118,6 +121,7 @@
     <ClInclude Include="Time\Clock.hpp" />
     <ClInclude Include="Time\StopWatch.hpp" />
     <ClInclude Include="Time\Timer.hpp" />
+    <ClInclude Include="Types\TypeIdentifier.hpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
