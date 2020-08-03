@@ -41,6 +41,8 @@
     <IntDir>$(SolutionDir)Build\$(Platform)-$(Configuration)\$(ProjectName)\</IntDir>
   </PropertyGroup>
   <ItemGroup>
+    <ClCompile Include="Containers\test_SparseSet.cpp" />
+    <ClCompile Include="DesignPatterns\test_ServiceLocator.cpp" />
     <ClCompile Include="Memory\Allocators\test_StackAllocator.cpp" />
     <ClCompile Include="Memory\test_memory_literals.cpp" />
   </ItemGroup>
